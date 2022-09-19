@@ -1,0 +1,9 @@
+html, body{
+    margin: 0;
+    background-color: cornsilk;
+}
+
+h1, a{
+    padding: 0;
+    margin: 0;
+}
