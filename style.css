@@ -1,7 +1,10 @@
-html, body{
-    margin: 0;
-    background-color: cornsilk;
+body{
+    max-width: 50%;
+    background-color: rgb(216, 148, 196);
+    margin: auto;
 }
+
+
 
 h1, a{
     padding: 0;

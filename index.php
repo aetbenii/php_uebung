@@ -8,12 +8,17 @@
 </head>
 <body >
     <header>
-        <h1>Hallo Welt!</h1>
+        <nav>
+            <a href="ueb_190922/logik.php">uebung</a>
+            <a href="ueb_190922/foreach.php">Meine Klasse</a>  
+        </nav>
+        <h1 style="font-size: 50px;">Damians Traumwelt</h1>
     </header>
 <?php
     $d = 'hallo welt hier ist kevin Augschölls';
     echo $d;
 ?>
+    
 </body>
 </html>
 

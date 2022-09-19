@@ -9,7 +9,12 @@
 </head>
 <body>
     <div>
-        <?php echo $inhalt ?>
+        <!-- <?php echo $inhalt ?> -->
+        <div>
+            <?php if (!$angemeldet){?>
+                <p> Sie sind nicht angemeldet! </p>
+            <?php } ?>
+        </div>
     </div>
 </body>
 </html>
