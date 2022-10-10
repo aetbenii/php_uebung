@@ -22,6 +22,15 @@ if (filter_has_var(INPUT_POST, 'user')) { // Formular wurde gepostet
     } else{
         $info[] = "Folgendes Password wurde übertragen: " . $password;
     }
+
+    // hidden feld auslesen... ist das gleiche wie bei kein hidden feld
+    $sid = filter_input(INPUT_POST, 'sid');
+    if (!$sid) {
+        $info[] = "Es wurden kein sid übertragen!";
+        $fehler = true;
+    } else{
+        $info[] = "Folgende sid wurde übertragen: " . $sid;
+    }
 }
  else {
     $fehler = true;
