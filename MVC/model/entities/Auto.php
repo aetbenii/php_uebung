@@ -8,6 +8,8 @@ class Auto{
     private string $kennzeichen;
     private string $modell;
 
+    protected static $table = 'auto';
+
     private function _insert(){
         $sql = 'INSERT INTO auto(marke, kennzeichen, modell) VALUES (:marke, :kennzeichen, :modell)';
         $abfrage = DB::getDB()->prepare($sql);

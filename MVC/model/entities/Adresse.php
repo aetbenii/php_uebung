@@ -1,9 +1,6 @@
 <?php
 
 class Adresse{
-    
-   
-
     private int $id = 0;
     private String $strasse;
     private int $hausnr;
@@ -11,6 +8,7 @@ class Adresse{
     private String $plz;
     private int $person_id;
     
+    protected static $table = 'adresse';
     
     public static function findeAlle(){
         $sql = 'SELECT * FROM adresse';

@@ -37,11 +37,11 @@ trait Persistable
             'INSERT INTO %s (%s) VALUES (%s)',
             $daten
         );
-        $abfrage = self::$db->prepare($sql);
+        $abfrage = DB::getDB()->prepare($sql);
         $abfrage->execute($attribute);
 
         // setze die ID auf den von der DB generierten Wert
-        $this->id = self::$db->lastInsertId();
+        $this->id = DB::getDB()->lastInsertId();
     }
 
     protected function update()
@@ -64,7 +64,7 @@ trait Persistable
             'UPDATE %s SET %s WHERE id = :id',
             $daten
         );
-        $abfrage = self::$db->prepare($sql);
+        $abfrage = DB::getDB()->prepare($sql);
         $abfrage->execute($this->toArray());
     }
 }

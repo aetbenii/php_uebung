@@ -19,6 +19,7 @@ abstract class AbstractBase
         }
 
         $this->render();
+        //var_dump($this);
     }
 
     public function render404()

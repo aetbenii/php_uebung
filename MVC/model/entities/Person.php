@@ -1,11 +1,13 @@
 <?php
 
 class Person{
-    
+    use ActiveRecordable, Persistable;
 
     private int $id = 0;
     private String $vorname;
     private String $nachname;
+
+    protected static $table = 'person';
 
     function getId():int{
         return $this->id;
@@ -44,6 +46,11 @@ class Person{
         $abfrage->setFetchMode(PDO::FETCH_CLASS, 'Person');
         return $abfrage->fetch();
     }
+
+    //für das refactoren
+      
+    //////////////
+
     /*
     public static function findeVornamen(String $vornamen){
         $sql = "SELECT vorname, nachname FROM person WHERE vorname = '".$vornamen."'";

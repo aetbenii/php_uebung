@@ -5,7 +5,7 @@ spl_autoload_register('autoloadEntities');
 spl_autoload_register('autoloadTraits');
 
 
-$aktion = $_GET['aktion'] ?? 'alleP';
+$aktion = $_GET['aktion'] ?? 'first';
 $controller = $_GET['controller'] ?? 'index';
 
 $controllerName = ucfirst($controller) . 'Controller';
@@ -15,5 +15,6 @@ if (class_exists($controllerName)) {
     $requestController->run($aktion);
 } else {
     $requestController = new IndexController();
+    
     //$requestController->render404();
 }
